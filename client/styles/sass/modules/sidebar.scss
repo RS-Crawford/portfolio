@@ -1,0 +1,41 @@
+
+.sidebar {
+  @extend .topMargin-medium;
+  @extend .shadow-light;
+
+  background-color: $card-background;
+  flex: auto;
+  height: 0%;
+  min-width: 250px;
+
+  header {
+    @extend .padding-medium;
+
+    background-color: $brand;
+    text-align: center;
+    font-size: $font-sidebar_header;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  li {
+    @extend .boxmod-medium;
+    @extend .hover-underlineFromCenter;
+  }
+
+  li:before {
+    @extend .hover-underlineFromCenter_before;
+  }
+
+  li:hover:before {
+    @extend .hover-underlineFromCenter_hoverBefore;
+  }
+}
+
+@media (max-width: $mobile-width), handheld {
+  .sidebar {
+    display: none;
+  }
+}

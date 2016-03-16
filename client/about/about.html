@@ -1,0 +1,33 @@
+<div class="container-about">
+  <div class="about-sidebar">
+    <img class="headshot-about" src="/client/assets/pics/headshot.jpg">
+      <header class="invisible">Personal Headshot</header>
+    </img>
+    <p><span class="contact-info icon-location"></span> 
+     San Francisco, CA</p>
+    <a href="mailto:craw.rs@gmail.com">
+      <p><span class="contact-info icon-envelope"></span> 
+      craw.rs@gmail.com</p>
+    </a>
+    <a href="https://www.twitter.com/crawrs">
+      <p><span class="contact-info icon-twitter"></span> 
+      twitter.com/crawrs</p>
+    </a>
+    <a href="https://www.github.com/RS-Crawford">
+      <p><span class="contact-info icon-github"></span> 
+      github.com/RS-Crawford</p>
+    </a>
+    <a href="https://www.linkedin.com/in/robertscrawford">
+      <p><span class="contact-info icon-linkedin2"></span> 
+      linkedin.com/in/robertscrawford</p>
+    </a>
+  </div>
+
+  <section class="content">
+    <header>About:</header>
+    <article class="content-main" ng-repeat="paragraph in content">
+      <p>{{ paragraph }}</p>
+    </article>
+  </section>  
+</div>
+

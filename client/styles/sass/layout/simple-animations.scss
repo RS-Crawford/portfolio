@@ -1,0 +1,50 @@
+
+/* change cursor on hover *  */
+.hover-cursor {
+  cursor: pointer;
+  cursor: hand;
+}
+/*  *          *          *  */
+
+
+/* slight raise on hover *  */
+.hover-pop {
+  // use to extend element:hover
+  top: -5px;
+  position: relative;
+}
+/*  *         *          *  */
+
+/* underlines element on hover starting at the center *  */
+.hover-underlineFromCenter {
+  @extend .hover-cursor;
+  
+  // use to extend element
+  position: relative;
+  text-decoration: none;
+}
+
+.hover-underlineFromCenter_before {
+  // use to extend element:before
+  content: "";
+  position: absolute;
+  margin-left: 10%;
+  width: 80%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: $brand-dark;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.hover-underlineFromCenter_hoverBefore {
+  // use to extend element:hover:before
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+/*  *                     *  *                       *  */

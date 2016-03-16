@@ -1,0 +1,30 @@
+
+.content-preview {
+  header {
+    font-size: 1.5em;
+    background-color: $card-background;
+    color: $brand-dark;
+  }
+
+  section {
+    @extend .hover-cursor;
+  }
+
+  article {
+    @extend .stackedPadding-medium;
+
+    text-align: left;
+  }
+}
+
+@media (max-width: $mobile-width), handheld {
+  .content-preview {
+    header {
+      font-size: $font-mobile-subheader;
+    }
+
+    article {
+      font-size: $font-mobile-text;
+    }
+  }
+}

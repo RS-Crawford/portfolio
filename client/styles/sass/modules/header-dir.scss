@@ -1,0 +1,48 @@
+.header-dir {
+  @extend .padding-medium;
+  @extend .flex-container;
+
+  padding-left: 12%;
+  padding-right: 12%;
+  background-color: $brand-dark;
+}
+
+.header-nametag {
+  @extend .hover-cursor;
+
+  padding: 1% 0% 0% 2%;
+  color: $brand-anti;
+  font-size: $font-header_nametag;
+  font-weight: bold;
+}
+
+.header-nav {
+  @extend .flex-container;
+
+  @include flex(auto);
+  @include flex-justify-content(flex-end);
+}
+
+.header-nav_mobile {
+  @extend .flex-container;
+
+  display: none;
+}
+
+@media (max-width: $mobile-width), handheld {
+  .header-nav {
+    display: none;
+  }
+
+  .header-nametag {
+    font-size: $font-mobile-header;
+  }
+
+  .header-nav_mobile {
+    @include flex-container(none);
+    @include flex(auto);
+    @include flex-justify-content(flex-end);
+
+    font-size: $font-mobile-header_nav;
+  }
+}

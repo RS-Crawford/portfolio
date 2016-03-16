@@ -1,0 +1,31 @@
+.article-content {
+  @extend .flex-container;
+
+  @include flex-direction(column);
+  @include flex-align-items(center);
+}
+
+.article-image {
+  @extend .padding-medium_percent;
+
+  max-width: 800px;
+  max-height: 500px;
+}
+
+.article-copy {
+  padding: 0% 8% 5% 8%;
+}
+
+@media (max-width: $mobile-width), handheld {
+  .article-copy {
+    width: 90%;
+  }
+
+  .article-image {
+    display: none;
+  }
+
+  .article-copy {
+    padding: 7% 8% 7% 8%;
+  }
+}

@@ -1,0 +1,25 @@
+.mobile-dropdown-menu {
+  @extend .sidebar;
+
+  top: 13%;
+  right: 0;
+  margin-right: 10%;
+  width: 68%;
+  position: absolute;
+  display: inline;
+  z-index: $z-index-dropdown;
+  color: $brand-dark;
+
+  ul {
+    @extend .shadow-light;
+    @extend .padding-heavy;
+
+    background-color: $card-background;
+  }
+}
+
+.mobile-menu_social {
+  @extend .flex-container;
+
+  @include flex-justify-content(center);
+}

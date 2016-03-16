@@ -1,0 +1,49 @@
+
+body {
+  width: 100%;
+  height: 100%;
+  color: $gray-lightish;
+  background-color: $gray-lighter;
+  font-size: $font-body_text;
+}
+
+ul { /* reset bullet padding */
+  margin: 0;
+  padding: 0;
+}
+
+a:link {
+  color: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.container {
+  @extend .flex-container;
+
+  @include flex-justify-content(space-around);
+
+  width: 80%;
+}
+
+
+.container-about {
+  @extend .container;
+}
+
+@media (max-width: $mobile-width), handheld {
+  .container {
+    width: 90%;
+  }
+
+  .container-about {
+    @include flex-direction(column);
+    @include flex-align-items(center);
+  }
+}

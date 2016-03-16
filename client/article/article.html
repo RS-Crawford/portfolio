@@ -1,0 +1,21 @@
+<div class="container">
+  <nav class="sidebar">
+    <header>Other {{ data.type }}:</header>
+    <ul ng-repeat="item in data.content">
+      <li ng-click="setArticle(item.name)">{{ item.title }}</li>
+    </ul>
+  </nav>
+
+  <section class="content">
+    <header>{{ article.title }}</header>
+    <section class="article-content">
+      <img class="article-image" ng-src="{{ article.img }}"></img>
+      <article class="article-copy">
+        {{ article.blurb }}
+      </article>
+      <article class="article-copy">
+        {{ article.content }}
+      </article>
+    </section>
+  </section>  
+</div>

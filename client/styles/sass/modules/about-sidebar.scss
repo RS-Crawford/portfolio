@@ -1,0 +1,43 @@
+.about-sidebar {
+  @extend .flex-container;
+  @extend .topMargin-medium;
+
+  @include flex-direction(column);
+
+  img {
+    max-height: 350px;
+    min-width: 250px;
+  }
+
+  p {
+    margin: 2% 0% 2% 2%;
+
+    font-size: $font-about_sidebar;
+  }
+
+  span {
+    font-size: $font-about_image;
+  }
+
+}
+
+.content-main {
+  padding: 7% 7% 3% 10%;
+  font-size: $font-about_text;
+
+  p {
+    line-height: 130%;
+  }
+}
+
+@media (max-width: $mobile-width), handheld {
+  .about-sidebar {
+    img {
+      @include flex-align-self(center);
+    }
+  }
+  .content-main {
+    font-size: $font-mobile_text;
+  }
+}
+

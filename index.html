@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html ng-app="portfolio">
+
+<head>
+  <!-- repsonse meta tag -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- minified css: -->
+  <link rel="stylesheet" type="text/css" href="/build/output.min.css">
+  <!-- non minified css: -->
+  <!-- <link rel="stylesheet" type="text/css" href="/client/styles/css/styles.css"> -->
+</head>
+
+<body>
+  <!-- header-template directive in /header/header-directive.js -->
+  <header header-template></header>
+  <div ui-view></div>
+  <footer footer-template></footer>
+</body>
+
+  <script src="/node_modules/angular/angular.js"></script>
+  <script src="/node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+  <!-- <script src="/build/output.min.js"></script> -->
+  <script src="/client/app.js"></script>
+  <script type="text/javascript" src="/client/landing/landing.js"></script>
+  <script type="text/javascript" src="/client/header/header-directive.js"></script>
+  <script type="text/javascript" src="/client/footer/footer-directive.js"></script>
+  <script type="text/javascript" src="/client/mobile-dropdown-menu/mobile-dropdown-menu-directive.js"></script>
+  <script type="text/javascript" src="/client/directives/dropdown-btn-directive.js"></script>
+  <script type="text/javascript" src="/client/utils/utilities-service.js"></script>
+  <script type="text/javascript" src="/client/utils/dropdown-service.js"></script>
+  <script type="text/javascript" src="/client/assets/data.js"></script>
+  <script type="text/javascript" src="/client/about/about.js"></script>
+
+</html>

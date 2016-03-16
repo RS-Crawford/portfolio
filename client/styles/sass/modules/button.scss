@@ -1,0 +1,61 @@
+
+.btn {
+  @extend .margin-light;
+  @extend .padding-heavy;
+
+  @include border-radius(5px);
+}
+
+.btn:focus {
+  outline: 0;
+  color: $brand-anti;
+}
+
+.btn-header {
+  @extend .btn;
+
+  background-color: $brand-dark;
+  color: $brand-anti;
+}
+
+.btn-header:hover {
+  @extend .hover-pop;
+  @extend .shadow-light;
+
+  background-color: $brand-anti;
+  color: $brand-primary;
+}
+
+.btn-header:focus {
+  border: 2px solid $brand-anti;
+}
+
+.btn-header_social {
+  @extend .btn-header;
+  @extend .padding-medium;
+
+  @include border-radius(30px);
+
+  border: 0px;
+  font-size: $font-header_btn;
+}
+
+.btn-header_social:focus {
+  border: 0px solid $brand-anti;
+}
+
+.btn-header_menu {
+  @extend .btn;
+
+  background-color: $brand-dark;
+  color: $brand-anti;
+  font-size: $font-header_btn;
+}
+
+.btn-header_menu:focus {
+  border: 0px solid $brand-anti;
+}
+
+.btn-mobile-menu_social {
+  @extend .btn-header_social;
+}

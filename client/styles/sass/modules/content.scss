@@ -1,0 +1,29 @@
+
+.content {
+  @extend .topMargin-medium;
+  @extend .shadow-light;
+
+  margin-left: 5%;
+  background-color: $card-background;
+  flex: auto;
+  height: 0%;
+  flex-grow: 4;
+
+  header {
+    @extend .padding-medium;
+
+    background-color: $brand;
+    text-align: center;
+    font-size: 2em;
+  }
+}
+
+@media (max-width: $mobile-width), handheld {
+  .content {
+    margin-left: 0%;
+
+    header {
+      font-size: $font-mobile-header;
+    }
+  }
+}

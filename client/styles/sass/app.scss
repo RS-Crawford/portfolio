@@ -1,0 +1,40 @@
+// import modified _customVariables.scss file
+@import "_customVariables.scss";
+// import bootstrap
+@import "../../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+
+/* import layout *   *   *   *   *   */
+// simple box model
+@import "layout/layout-main-content.scss";
+// overarching layout
+@import "layout/overarching-layout.scss";
+// simple animations
+@import "layout/simple-animations.scss";
+// shadow
+@import "layout/shadow.scss";
+// icons
+@import "layout/icons.scss";
+// gradients
+@import "layout/gradients.scss";
+
+/* import modules *   *   *   *   *   */
+// buttons
+@import "modules/button.scss";
+// header DIRECTIVE
+@import "modules/header-dir.scss";
+// footer DIRECTIVE
+@import "modules/footer-dir.scss";
+// sidebar
+@import "modules/sidebar.scss";
+// content
+@import "modules/content.scss";
+// content-preview
+@import "modules/content-preview.scss";
+// mobile-menu
+@import "modules/mobile-dropdown-menu.scss";
+// pics
+@import "modules/pics.scss";
+// about sidebar
+@import "modules/about-sidebar.scss";
+// article
+@import "modules/article.scss";

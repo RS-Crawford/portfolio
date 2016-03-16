@@ -1,0 +1,18 @@
+<div class="container">
+  <nav class="sidebar">
+    <header>{{ data.type }}:</header>
+    <ul ng-repeat="item in data.content">
+      <li ng-click="setArticle(item.name)">{{ item.title }}</li>
+    </ul>
+  </nav>
+
+  <section class="content">
+    <header>Latest:</header>
+    <div class="content-preview" ng-repeat="item in data.content">
+      <section ng-click="setArticle(item.name)">
+        <header>{{ item.title }}</header>
+        <article>{{ item.blurb }}</article>
+      </section>
+    </div>
+  </section>  
+</div>

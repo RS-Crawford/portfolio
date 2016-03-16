@@ -1,0 +1,134 @@
+
+// padding
+.padding-light {
+  padding: 5px;
+}
+
+.padding-medium {
+  padding: 10px;
+}
+
+.padding-heavy {
+  padding: 15px;
+}
+
+.padding-light_percent {
+  padding: 3%;
+}
+
+.padding-medium_percent {
+  padding: 6%;
+}
+
+// margin
+.margin-light {
+  margin: 5px;
+}
+
+.margin-medium {
+  margin: 10px;
+}
+
+.margin-heavy {
+  margin: 15px;
+}
+
+// boxmod (padding & margin)
+.boxmod-light {
+  padding: 5px;
+  margin: 5px;
+}
+
+.boxmod-medium {
+  padding: 10px;
+  margin: 10px;
+}
+
+.boxmod-heavy {
+  padding: 15px;
+  margin: 15px;
+}
+
+// topMargin
+.topMargin-light {
+  margin-top: 2%;
+}
+
+.topMargin-medium {
+  margin-top: 5%;
+}
+
+.topMargin-heavy {
+  margin-top: 10%;
+}
+
+// stackedPadding (more left and right, less top and bottom)
+.stackedPadding-light {
+  padding: 1% 5% 3% 5%;
+}
+
+.stackedPadding-medium {
+  padding: 3% 10% 3% 10%;
+}
+
+.stackedPadding-heavy {
+  padding: 5% 15% 5% 15%;
+}
+
+// flex
+.flex-container {
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex-container($none) {
+  // this mixin is a hacky workaround for media queries
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($type) {
+  -webkit-flex: $type;
+          flex: $type;
+}
+
+@mixin flex-direction($placement) {
+  -webkit-flex-direction: $placement;
+          flex-direction: $placement;
+}
+
+@mixin flex-justify-content($placement) {
+  -webkit-justify-content: $placement;
+          justify-content: $placement;
+}
+
+@mixin flex-align-items($placement) {
+  -webkit-align-items: $placement;
+          align-items: $placement;
+}
+
+@mixin flex-align-self($placement) {
+  -webkit-align-self: $placement;
+          align-self: $placement;
+}
+
+// border radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+// divider
+.divider {
+  @extend .flex-container;
+
+  @include flex-justify-content(center);
+
+  margin: 5% 0 5% 10%;
+  width: 80%;
+  height: 2px;
+  background-color: $gray-light;
+}
+

@@ -1,0 +1,26 @@
+.footer-dir {
+  @extend .padding-medium;
+  @extend .flex-container;
+
+  @include flex-justify-content(center);
+
+  margin-top: 5%;
+  background-color: $gray-dark;
+  color: $brand-anti;
+}
+
+.footer-font-image {
+  font-size: $font-footer_image;
+}
+
+@media (max-width: $mobile-width), handheld {
+  .footer-dir {
+    p {
+      font-size: $font-mobile-footer_text;
+    }
+  }
+
+  .footer-font-image {
+    font-size: $font-mobile-footer_image;
+  }
+}
